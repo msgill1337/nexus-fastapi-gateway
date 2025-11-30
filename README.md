@@ -185,15 +185,21 @@ graph TB
     
     FastAPI --> MetricsAPI
 
-    style FastAPI fill:#4A90E2
-    style PresidioAnalyzer fill:#E8F4F8
-    style PresidioAnonymizer fill:#E8F4F8
-    style ContentSafety fill:#E8F4F8
-    style AzureOpenAI fill:#FF6B6B
-    style AzureContentSafety fill:#FF6B6B
-    style Redis fill:#FFD93D
-    style LogFile fill:#FFD93D
-    style MetricsAPI fill:#6BCF7F
+    style FastAPI fill:#4A90E2,color:#FFFFFF
+    style PresidioAnalyzer fill:#E8F4F8,color:#000000
+    style PresidioAnonymizer fill:#E8F4F8,color:#000000
+    style ContentSafety fill:#E8F4F8,color:#000000
+    style AzureOpenAI fill:#FF6B6B,color:#FFFFFF
+    style AzureContentSafety fill:#FF6B6B,color:#FFFFFF
+    style Redis fill:#FFD93D,color:#000000
+    style LogFile fill:#FFD93D,color:#000000
+    style MetricsAPI fill:#6BCF7F,color:#FFFFFF
+    style AdminAPI fill:#6BCF7F,color:#FFFFFF
+    style AuthVerifier fill:#E8F4F8,color:#000000
+    style RateLimiter fill:#E8F4F8,color:#000000
+    style TokenCounter fill:#E8F4F8,color:#000000
+    style CostCalculator fill:#E8F4F8,color:#000000
+    style Logger fill:#E8F4F8,color:#000000
 ```
 
 **Component Descriptions:**
