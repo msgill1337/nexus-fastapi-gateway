@@ -76,5 +76,5 @@ dmypy.json
 .pyre/
 
 # Project-specific
-# Source files are now in test-project/src/, .venv/ is pure virtual environment
+# Source files are now in nexus-gateway/src/, .venv/ is pure virtual environment
 

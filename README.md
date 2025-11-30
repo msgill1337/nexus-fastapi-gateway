@@ -156,8 +156,8 @@ graph TB
     end
 
     subgraph "Monitoring"
-        MetricsAPI[/metrics Endpoint]
-        AdminAPI[/admin/users<br/>User Management]
+        MetricsAPI["/metrics Endpoint"]
+        AdminAPI["/admin/users - User Management"]
     end
 
     Client --> FastAPI
@@ -224,7 +224,7 @@ graph TB
 
 1. Install dependencies:
 ```bash
-cd test-project
+cd nexus-gateway
 pip install -r src/requirements.txt
 ```
 
@@ -263,7 +263,7 @@ pip install -r src/requirements.txt
    
    Then copy the example file and edit it:
    ```bash
-   cp test-project/env.example .env
+   cp nexus-gateway/env.example .env
    # Edit .env with your actual credentials
    ```
    
@@ -276,16 +276,16 @@ redis-server
 
 4. **Create your first user:**
    ```bash
-   cd test-project/src
+   cd nexus-gateway/src
    python bootstrap_user.py
    ```
    Save the API key that's displayed - you'll need it for authentication.
 
-   **📖 For detailed authentication setup instructions, see [`test-project/AUTHENTICATION.md`](test-project/AUTHENTICATION.md)**
+   **📖 For detailed authentication setup instructions, see [`nexus-gateway/AUTHENTICATION.md`](nexus-gateway/AUTHENTICATION.md)**
 
 5. Run the gateway:
 ```bash
-cd test-project/src
+cd nexus-gateway/src
 uvicorn main:app --reload
 ```
 
@@ -431,11 +431,4 @@ Potential improvements for production use:
 - Audit logging for user management operations
 - Multi-tenant isolation and resource quotas
 
-## License
-
-[Add your license here]
-
-## Contributing
-
-[Add contribution guidelines if applicable]
 
