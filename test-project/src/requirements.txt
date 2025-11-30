@@ -1,0 +1,8 @@
+fastapi
+openai
+tiktoken
+redis
+presidio-analyzer
+presidio-anonymizer
+azure-ai-contentsafety
+pyrit
