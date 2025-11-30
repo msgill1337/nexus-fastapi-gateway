@@ -287,8 +287,6 @@ redis-server
    ```
    Save the API key that's displayed - you'll need it for authentication.
 
-   **📖 For detailed authentication setup instructions, see [`nexus-gateway/AUTHENTICATION.md`](nexus-gateway/AUTHENTICATION.md)**
-
 5. Run the gateway:
 ```bash
 cd nexus-gateway/src
