@@ -43,8 +43,8 @@ graph TB
     end
 
     subgraph "Monitoring"
-        MetricsAPI[/metrics Endpoint]
-        AdminAPI[/admin/users<br/>User Management]
+        MetricsAPI["/metrics Endpoint"]
+        AdminAPI["/admin/users - User Management"]
     end
 
     Client --> FastAPI

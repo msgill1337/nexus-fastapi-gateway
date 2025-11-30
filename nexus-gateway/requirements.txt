@@ -1,2 +1,8 @@
-fastapi[standard]==0.113.0
-pydantic==2.8.0
+fastapi
+openai
+tiktoken
+redis
+presidio-analyzer
+presidio-anonymizer
+azure-ai-contentsafety
+pyrit
