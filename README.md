@@ -335,6 +335,68 @@ curl -X POST "http://localhost:8000/chat/completions" \
   }'
 ```
 
+### API Examples & Screenshots
+
+#### 1. Metrics Endpoint
+
+The `/metrics` endpoint provides comprehensive insights into API usage, security events, and costs:
+
+![Metrics Endpoint](docs/images/metrics-endpoint.png)
+
+**Response includes:**
+- **Overview**: Total requests, tokens processed, cumulative costs, and Azure-blocked requests
+- **PII Detections**: Count of detected personally identifiable information by type (PERSON, PHONE_NUMBER, EMAIL_ADDRESS, LOCATION)
+- **Content Safety Violations**: Count of content safety policy violations by category (HATE, SELF_HARM, SEXUAL, VIOLENCE)
+
+This endpoint is publicly accessible (no authentication required) and provides real-time visibility into gateway operations.
+
+#### 2. Chat Completions Request
+
+A typical chat completion request includes system and user messages:
+
+![Chat Completions Request](docs/images/chat-completions-request.png)
+
+**Request includes:**
+- System message defining the assistant's role
+- User message with the query
+- Model specification (`gpt-4o-mini`)
+- Token limits and temperature settings
+
+#### 3. Content Safety Filtering
+
+The gateway automatically analyzes all content through Azure Content Safety before processing:
+
+![Content Safety Results](docs/images/content-safety-results.png)
+
+**Content Safety checks:**
+- **Hate**: Detects hateful or discriminatory content
+- **Self-Harm**: Identifies content promoting self-harm
+- **Sexual**: Filters sexually explicit material
+- **Violence**: Detects violent or harmful content
+- **Protected Material**: Checks for protected material (code and text)
+
+All categories show `filtered: false` and `severity: "safe"` for content that passes safety checks.
+
+#### 4. Complete Response with Metadata
+
+The gateway enriches responses with detailed metadata about the request:
+
+![Complete Response](docs/images/complete-response.png)
+
+**Response includes:**
+- **sent_prompt**: The anonymized prompt that was actually sent to Azure OpenAI (after PII redaction)
+- **pii_detection**: Information about any PII that was detected and redacted
+- **azure_response**: The complete response from Azure OpenAI
+- **estimated_prompt_tokens**: Token count for the input
+- **estimated_costs**: Cost breakdown (input, output, and total in USD)
+- **rate_limit_info**: Current rate limit status including:
+  - Tokens used in the current window
+  - Token limit per window
+  - Tokens remaining
+  - Time until rate limit resets
+
+This comprehensive response provides full transparency into what was processed, how much it cost, and current usage limits.
+
 ### User Management Examples
 
 **Create a new user:**
