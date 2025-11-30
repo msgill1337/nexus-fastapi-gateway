@@ -11,7 +11,7 @@
   ],
   "pii_detection": {},
   "azure_response": {
-    "id": "chatcmpl-Chjr3f7WHlINHI6BiP99YtQWjy5WN",
+    "id": "chatcmpl-EXAMPLE123",
     "choices": [
       {
         "finish_reason": "stop",
