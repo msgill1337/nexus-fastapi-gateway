@@ -2,6 +2,15 @@
 
 A production-ready FastAPI gateway that sits between your applications and Azure OpenAI, adding essential security, compliance, and observability layers. Think of it as your intelligent middleware that ensures every AI request is safe, compliant, and properly monitored before it reaches the LLM.
 
+## 🚀 Technology Stack
+
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Presidio](https://img.shields.io/badge/Presidio-4285F4?style=for-the-badge&logo=microsoft&logoColor=white)
+![PyRIT](https://img.shields.io/badge/PyRIT-FF6B6B?style=for-the-badge&logo=shield&logoColor=white)
+
 ## Why This Exists
 
 When you're building applications that use Azure OpenAI, you quickly realize that the base API doesn't give you everything you need out of the box. You need to protect user data, filter harmful content, control costs, and understand what's happening in your system. Building these features into every application is repetitive and error-prone.
